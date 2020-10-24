@@ -8,19 +8,19 @@
         <div id="map", class="map"></div>
         <script type="text/javascript">
       var style = new ol.Style({
-        fill: new ol.Fill({
+        fill: new ol.Style.Fill({
           color: 'rgba(0, 0, 255, 0.1)',
         }),
-        stoke: new ol.Stroke({
+        stoke: new ol.Style.Stroke({
           color: '#319FD3',
           width: 1,
         }),
-        text: new ol.Text({
+        text: new ol.Style.Text({
           font: '12px calibri,sans-serif',
-          fill: new ol.Fill({
+          fill: new ol.Style.Fill({
             color: '#000',
           }),
-          stroke: new ol.Stroke({
+          stroke: new ol.Style.Stroke({
             color: '#fff',
             width: 3,
           }),
@@ -50,7 +50,7 @@
         var Vectorlayer = new ol.layer.Vector({
             source: mySource,
             style: function (feature) {
-              style.getText().setText(feature.get('name'));
+              style.getText().setText(feature.get('SIG_KOR_NM'));
               return style;
             },
         });

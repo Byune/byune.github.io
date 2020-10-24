@@ -7,6 +7,25 @@
     <body>
         <div id="map", class="map"></div>
         <script type="text/javascript">
+      var style = new Style({
+        fill: new Fill({
+          color: 'rgba(255, 255, 255, 0.6)',
+        }),
+        stoke: new Stroke({
+          color: '#319FD3',
+          width: 1,
+        }),
+        text: new Text({
+          font: '12px calibri,sans-serif',
+          fill: new Fill({
+            color: '#000',
+          }),
+          stroke: new Stroke({
+            color: '#fff',
+            width: 3,
+          }),
+        }),
+      });
       var map = new ol.Map({
         target: 'map',
         layers: [
@@ -30,15 +49,13 @@
         });
         var Vectorlayer = new ol.layer.Vector({
             source: mySource,
-            style: new ol.style.Style({
-                stroke: new ol.style.Stroke({
-                    color: "red"
-
-                })
-            })
-
+            style: function (feature) {
+              style.getText().setText(feature.get('name'));
+              return style;
+            },
         });
         map.addLayer(Vectorlayer);
     </script>
+
     </body>
 </html>

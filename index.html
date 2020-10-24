@@ -61,7 +61,7 @@
             //     style.getFill().setColor('black');
             //   }
 
-              style.getFill().setColor(array[generateRandom(0,9)])
+            //   style.getFill().setColor(array[generateRandom(0,9)])
               style.getText().setText(feature.get('SIG_KOR_NM'));
               return style;
             },
@@ -97,7 +97,8 @@ var featureOverlay = new ol.layer.Vector({
     source: new ol.source.Vector(),
 	map: map,
   style: function (feature) {
-    highlightStyle.getText().setText(feature.get('SIG_KOR_NM'));
+	  highlightStyle.getFill().setColor(array[generateRandom(0,9)]);
+    // highlightStyle.getText().setText(feature.get('SIG_KOR_NM'));
     return highlightStyle;
   	},
 });

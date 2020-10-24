@@ -29,7 +29,6 @@
         mySource.addFeatures((new ol.format.GeoJSON()).readFeatures(data));
         });
         var Vectorlayer = new ol.layer.Vector({
-            Source: mySource,
             source: mySource,
             style: new ol.style.Style({
                 stroke: new ol.style.Stroke({
@@ -39,6 +38,7 @@
             })
 
         });
+        map.addLayer(Vectorlayer);
     </script>
     </body>
 </html>

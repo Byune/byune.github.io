@@ -54,12 +54,16 @@
         var Vectorlayer = new ol.layer.Vector({
             source: mySource,
             style: function (feature) {
-              style.getFill().setColor(array[0])
+              style.getFill().setColor(array[])
               style.getText().setText(feature.get('SIG_KOR_NM'));
               return style;
             },
-            //fill : 
+
         });
+        var generateRandom = function(0,9){
+          var ranNum = Math.floor(Math.randim()*(9-0+1))+0;
+          return ranNum;
+        }
         map.addLayer(Vectorlayer);
     </script>
 

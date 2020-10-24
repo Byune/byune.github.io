@@ -54,7 +54,7 @@
         var Vectorlayer = new ol.layer.Vector({
             source: mySource,
             style: function (feature) {
-              if(feature.get(SIG_KOR_NM)=="마곡동"){
+              if(feature.get('SIG_KOR_NM')=="마곡동"){
                 style.getFill().setColor('red');           
               }
               else{

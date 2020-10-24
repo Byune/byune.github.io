@@ -7,6 +7,10 @@
     <body>
         <div id="map", class="map"></div>
         <script type="text/javascript">
+        var array =['#F5A9BC','#F7819F','#FA5882','#FE2E64',
+                    '#FF0040','#DF013A','#B40431','#8A0829',
+                    '#610B21','#3B0B17'];
+      
       var style = new ol.style.Style({
         fill: new ol.style.Fill({
           color: 'rgba(255, 255, 255, 0.6)',
@@ -50,9 +54,11 @@
         var Vectorlayer = new ol.layer.Vector({
             source: mySource,
             style: function (feature) {
+              style.getFill().setColor(array[0])
               style.getText().setText(feature.get('SIG_KOR_NM'));
               return style;
             },
+            //fill : 
         });
         map.addLayer(Vectorlayer);
     </script>
@@ -60,4 +66,3 @@
     </body>
 </html>
 
-<!-- 배열만들기 -->

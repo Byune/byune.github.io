@@ -54,14 +54,14 @@
         var Vectorlayer = new ol.layer.Vector({
             source: mySource,
             style: function (feature) {
-              if(feature.get('SIG_KOR_NM')=="마곡동"){
-                style.getFill().setColor('red');           
-              }
-              else{
-                style.getFill().setColor('black');
-              }
+            //   if(feature.get('SIG_KOR_NM')=="마곡동"){
+            //     style.getFill().setColor('red');           
+            //   }
+            //   else{
+            //     style.getFill().setColor('black');
+            //   }
 
-              // style.getFill().setColor(array[generateRandom(0,9)])
+              style.getFill().setColor(array[generateRandom(0,9)])
               style.getText().setText(feature.get('SIG_KOR_NM'));
               return style;
             },
@@ -116,7 +116,7 @@ var displayFeatureInfo = function (pixel) {
 				 }
 				 highlight = feature;
 				 }
-				 };
+			};
 
 map.on('pointermove', function (evt) {
 	if (evt.dragging) {

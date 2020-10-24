@@ -73,31 +73,31 @@
         }
         map.addLayer(Vectorlayer);
 
-        var highlightStyle = new Style({
-  stroke: new Stroke({
+var highlightStyle = new ol.style.Style({
+  stroke: new ol.style.Stroke({
     color: '#f00',
     width: 1,
   }),
-  fill: new Fill({
+  fill: new ol.style.Fill({
     color: 'rgba(255,0,0,0.1)',
   }),
-  text: new Text({
+  text: new ol.style.Text({
     font: '12px Calibri,sans-serif',
-    fill: new Fill({
+    fill: new ol.style.Fill({
       color: '#000',
     }),
-    stroke: new Stroke({
+    stroke: new ol.style.Stroke({
       color: '#f00',
       width: 3,
     }),
   }),
 });
 
-var featureOverlay = new VectorLayer({
-    source: new VectorSource(),
+var featureOverlay = new ol.layer.Vector({
+    source: new ol.source.Vector(),
 	map: map,
   style: function (feature) {
-    highlightStyle.getText().setText(feature.get('name'));
+    highlightStyle.getText().setText(feature.get('SIG_KOR_NM'));
     return highlightStyle;
   	},
 });

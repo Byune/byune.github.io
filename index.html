@@ -16,7 +16,7 @@
         ],
         view: new ol.View({
           center: ol.proj.fromLonLat([128.317960,36.4203004]),
-          zoom: 10
+          zoom: 6
         })
       });
             var mySource=new ol.source.Vector({
@@ -31,7 +31,7 @@
         var Vectorlayer = new ol.layer.Vector({
             source: mySource,
             style: new ol.style.Style({
-                stroke: new ol.style.stroke({
+                stroke: new ol.style.Stroke({
                     color: "black"
 
                 })

@@ -47,21 +47,25 @@
             featureProjection:'EPSG:3857'
           })
       });
-      $.getJSON("./emd07.geojson", function(data) {
+      $.getJSON("./emd01.geojson","./emd02.geojson","./emd03.geojson","./emd04.geojson",
+                "./emd05.geojson","./emd06.geojson","./emd07.geojson","./emd08.geojson",
+                "./emd09.geojson","./emd010.geojson","./emd011.geojson","./emd012.geojson",
+                "./emd013.geojson","./emd014.geojson","./emd015.geojson","./emd016.geojson",
+                "./emd017.geojson", function(data) {
 
         mySource.addFeatures((new ol.format.GeoJSON()).readFeatures(data));
         });
         var Vectorlayer = new ol.layer.Vector({
             source: mySource,
             style: function (feature) {
-              if(feature.get('SIG_KOR_NM')=="덕포동"){
-                style.getFill().setColor('red');           
-              }
-              else{
-                style.getFill().setColor('black');
-              }
+              // if(feature.get('SIG_KOR_NM')=="덕포동"){
+              //   style.getFill().setColor('red');           
+              // }
+              // else{
+              //   style.getFill().setColor('black');
+              // }
 
-              // style.getFill().setColor(array[generateRandom(0,9)])
+              style.getFill().setColor(array[generateRandom(0,9)])
               style.getText().setText(feature.get('SIG_KOR_NM'));
               return style;
             },

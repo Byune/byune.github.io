@@ -47,11 +47,7 @@
             featureProjection:'EPSG:3857'
           })
       });
-      $.getJSON("./emd01.geojson","./emd02.geojson","./emd03.geojson","./emd04.geojson",
-                "./emd05.geojson","./emd06.geojson","./emd07.geojson","./emd08.geojson",
-                "./emd09.geojson","./emd010.geojson","./emd011.geojson","./emd012.geojson",
-                "./emd013.geojson","./emd014.geojson","./emd015.geojson","./emd016.geojson",
-                "./emd017.geojson", function(data) {
+      $.getJSON("./emd09.geojson", function(data) {
 
         mySource.addFeatures((new ol.format.GeoJSON()).readFeatures(data));
         });

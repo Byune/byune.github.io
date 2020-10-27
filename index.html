@@ -7,9 +7,9 @@
     <body>
         <div id="map", class="map"></div>
         <script type="text/javascript">
-        var array =['#F5A9BC','#F7819F','#FA5882','#FE2E64',
-                    '#FF0040','#DF013A','#B40431','#8A0829',
-                    '#610B21','#3B0B17'];
+        var array =['#FF0000','#FF4000','#FF8000','#FFBF00',
+                    '#FFFF00','#BFFF00','#80FF00','#40FF00',
+                    '#00FF00','#00FF40'];
       
       var style = new ol.style.Style({
         fill: new ol.style.Fill({
@@ -54,14 +54,14 @@
         var Vectorlayer = new ol.layer.Vector({
             source: mySource,
             style: function (feature) {
-            //   if(feature.get('SIG_KOR_NM')=="마곡동"){
-            //     style.getFill().setColor('red');           
-            //   }
-            //   else{
-            //     style.getFill().setColor('black');
-            //   }
+              // if(feature.get('SIG_KOR_NM')=="덕포동"){
+              //   style.getFill().setColor('red');           
+              // }
+              // else{
+              //   style.getFill().setColor('black');
+              // }
 
-            //   style.getFill().setColor(array[generateRandom(0,9)])
+              style.getFill().setColor(array[generateRandom(0,9)])
               style.getText().setText(feature.get('SIG_KOR_NM'));
               return style;
             },
@@ -97,8 +97,8 @@ var featureOverlay = new ol.layer.Vector({
     source: new ol.source.Vector(),
 	map: map,
   style: function (feature) {
-	  highlightStyle.getFill().setColor(array[generateRandom(0,9)]);
-    // highlightStyle.getText().setText(feature.get('SIG_KOR_NM'));
+	  // highlightStyle.getFill().setColor(array[generateRandom(0,9)]);
+    highlightStyle.getText().setText(feature.get('SIG_KOR_NM'));
     return highlightStyle;
   	},
 });

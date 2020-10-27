@@ -47,7 +47,7 @@
             featureProjection:'EPSG:3857'
           })
       });
-      $.getJSON("./emd012.geojson", function(data) {
+      $.getJSON("./emd011.geojson", function(data) {
 
         mySource.addFeatures((new ol.format.GeoJSON()).readFeatures(data));
         });

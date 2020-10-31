@@ -68,6 +68,11 @@
       $.getJSON("./emd09.geojson", function(data) {
 
         mySource.addFeatures((new ol.format.GeoJSON()).readFeatures(data));
+        }).done(function(){
+          mySource.forEachFeature(function(feature){
+          var featureIndex = feature.getId();
+          console.log(featureIndex)
+        });
         });
         var Vectorlayer = new ol.layer.Vector({
             source: mySource,
@@ -84,11 +89,6 @@
               return style;
             }
 
-        }).done(function(){
-          mySource.forEachFeature(function(feature){
-        var featureIndex = feature.getId();
-        console.log(featureIndex)
-        });
         });
       $.getJSON("./result.json", function(data){
     

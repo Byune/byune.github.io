@@ -53,9 +53,12 @@
         ],
         view: new ol.View({
           center: ol.proj.fromLonLat([128.317960,36.4203004]),
-          zoom: 6
+          zoom: 11
         })
       });
+          function setZoomable(zoomable){
+            map.setZoomable(zoomable);
+          }
             var mySource=new ol.source.Vector({
           format: new ol.format.GeoJSON({
             featureProjection:'EPSG:3857'

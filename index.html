@@ -85,6 +85,14 @@
             },
 
         });
+      $.getJSON("./result.json", function(data) {
+      });
+
+      mySource().forEachFeature(function(feature){
+        var featureIndex = feature.getId();
+        console.log(featureIndex)
+        });
+
         var generateRandom = function(min,max){
           var ranNum = Math.floor(Math.random()*(max-min+1))+min;
           return ranNum;

@@ -7,18 +7,18 @@
         <h2>도시재난 프로젝트</h2>
     </head>
     <body>
-        <input type="text" id ="inputId" class="inputClass" name="inputName">
+        <input type="text" id ="map" class="map" name="SIG_KOR_NM">
         <input type="button" onclick="getInputValue();" value="확인">
         <div id="map", class="map"></div>
         <script type="text/javascript">
         function getInputValue(){
-          var valueById = $("#inputId").val();
-          var valueByClass = $(".inputClass").val();
-          var valueByName = $("input[name=inputName").val();
+          var valueById = $("#map").val();
+          var valueByClass = $(".map").val();
+          var valueByName = $("input[name=SIG_KOR_NM").val();
 
-          alert("valueById = " + valueById +
-                "\nvalueByClass =" + valueByClass +
-                "\nvalueByName =" + valueByName);
+          alert("valueById = " + "map" +
+                "\nvalueByClass =" + map +
+                "\nvalueByName =" + SIG_KOR_NM);
         }
         var array =['#FF0000','#FF4000','#FF8000','#FFBF00',
                     '#FFFF00','#BFFF00','#80FF00','#40FF00',

@@ -12,7 +12,12 @@
         <input type="button" onclick="getInputValue();" value="확인"> 
         <div id="map", class="map"></div>
         <script type="text/javascript">
-        var test = $.getJSON("./result.json");
+        
+        var resultjson = {};
+        $.getJSON("./result.json", function(data){
+          resultjson = data;
+        });
+
         function getInputValue(){
           var valueById = $("#inputId").val();
           var valueByClass = $(".inputClass").val();

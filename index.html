@@ -88,7 +88,7 @@
       $.getJSON("./result.json", function(data) {
       });
 
-      mySource().forEachFeature(function(feature){
+      mySource.forEachFeature(function(feature){
         var featureIndex = feature.getId();
         console.log(featureIndex)
         });

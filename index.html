@@ -12,6 +12,7 @@
         <input type="button" onclick="getInputValue();" value="확인"> 
         <div id="map", class="map"></div>
         <script type="text/javascript">
+        var test = $.getJSON("./result.json");
         function getInputValue(){
           var valueById = $("#inputId").val();
           var valueByClass = $(".inputClass").val();
@@ -70,8 +71,8 @@
         mySource.addFeatures((new ol.format.GeoJSON()).readFeatures(data));
         }).done(function(){
           mySource.forEachFeature(function(feature){
-          var featureIndex = feature.getId();
-          console.log(featureIndex)
+          var sigCd = feature.get("SIG_CD");
+          // console.log(sigCd)
         });
         });
         var Vectorlayer = new ol.layer.Vector({
@@ -90,9 +91,7 @@
             }
 
         });
-      $.getJSON("./result.json", function(data){
-    
-        });
+      
 
       
 

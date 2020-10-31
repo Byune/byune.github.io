@@ -93,43 +93,43 @@ var highlightStyle = new ol.style.Style({
     }),
   }),
 });
+// 하이라이트 시작
+// var featureOverlay = new ol.layer.Vector({
+//     source: new ol.source.Vector(),
+// 	map: map,
+//   style: function (feature) {
+// 	  // highlightStyle.getFill().setColor(array[generateRandom(0,9)]);
+//     highlightStyle.getText().setText(feature.get('SIG_KOR_NM'));
+//     return highlightStyle;
+//   	},
+// });
 
-var featureOverlay = new ol.layer.Vector({
-    source: new ol.source.Vector(),
-	map: map,
-  style: function (feature) {
-	  // highlightStyle.getFill().setColor(array[generateRandom(0,9)]);
-    highlightStyle.getText().setText(feature.get('SIG_KOR_NM'));
-    return highlightStyle;
-  	},
-});
+// var highlight;
+// var displayFeatureInfo = function (pixel) {
+//   var feature = map.forEachFeatureAtPixel(pixel, function (feature) {
+//     return feature;
+// 	 });
+// 	 if (feature !== highlight) {
+// 		 if (highlight) {
+// 			 featureOverlay.getSource().removeFeature(highlight);
+// 			 }
+// 			 if (feature) {
+// 				 featureOverlay.getSource().addFeature(feature);
+// 				 }
+// 				 highlight = feature;
+// 				 }
+// 			};
 
-var highlight;
-var displayFeatureInfo = function (pixel) {
-  var feature = map.forEachFeatureAtPixel(pixel, function (feature) {
-    return feature;
-	 });
-	 if (feature !== highlight) {
-		 if (highlight) {
-			 featureOverlay.getSource().removeFeature(highlight);
-			 }
-			 if (feature) {
-				 featureOverlay.getSource().addFeature(feature);
-				 }
-				 highlight = feature;
-				 }
-			};
-
-map.on('pointermove', function (evt) {
-	if (evt.dragging) {
-		return;
-		}
-		var pixel = map.getEventPixel(evt.originalEvent);
-		displayFeatureInfo(pixel);
-		});
-		map.on('click', function (evt) {
-			displayFeatureInfo(evt.pixel);
-			});
+// map.on('pointermove', function (evt) {
+// 	if (evt.dragging) {
+// 		return;
+// 		}
+// 		var pixel = map.getEventPixel(evt.originalEvent);
+// 		displayFeatureInfo(pixel);
+// 		});
+// 		map.on('click', function (evt) {
+// 			displayFeatureInfo(evt.pixel);
+// 			});
     </script>
 
     </body>

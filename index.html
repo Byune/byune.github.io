@@ -27,19 +27,19 @@
       
       var style = new ol.style.Style({
         fill: new ol.style.Fill({
-          color: 'rgba(255, 255, 255, 0.6)',
+          color: 'rgba(255, 255, 255, 0.5)',
         }),
         stoke: new ol.style.Stroke({
-          color: '#319FD3',
+          color: 'grey',
           width: 1,
         }),
         text: new ol.style.Text({
           font: '8px calibri,sans-serif',
           fill: new ol.style.Fill({
-            color: '#000',
+            color: 'blue',
           }),
           stroke: new ol.style.Stroke({
-            color: '#fff',
+            color: 'white',
             width: 3,
           }),
         }),
@@ -75,7 +75,7 @@
               //   style.getFill().setColor('blue'');
               // }
 
-              style.getFill().setColor(array[generateRandom(0,9)])
+              // style.getFill().setColor(array[generateRandom(0,9)])
               style.getText().setText(feature.get('SIG_KOR_NM'));
               return style;
             },

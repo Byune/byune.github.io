@@ -84,15 +84,17 @@
               return style;
             }
 
-        });
-      $.getJSON("./result.json", function(data){
-        mySource.addFeatures((new ol.format.GeoJSON()).readFeatures(data));
-        });
-
-      mySource.forEachFeature(function(feature){
+        }).done(function(){
+          mySource.forEachFeature(function(feature){
         var featureIndex = feature.getId();
         console.log(featureIndex)
         });
+        });
+      $.getJSON("./result.json", function(data){
+    
+        });
+
+      
 
         var generateRandom = function(min,max){
           var ranNum = Math.floor(Math.random()*(max-min+1))+min;

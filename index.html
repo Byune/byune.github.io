@@ -86,7 +86,8 @@
 
         });
       $.getJSON("./result.json", function(data) {
-      });
+        mySource.addFeatures((new ol.format.GeoJSON()).readFeatures(data));
+        });
 
       mySource.forEachFeature(function(feature){
         var featureIndex = feature.getId();

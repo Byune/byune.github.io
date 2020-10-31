@@ -8,11 +8,11 @@
     </head>
     <body>
         <input type="text" id ="inputId" class="inputClass" name="inputName">
-        <input type="button" onclick="getInputValue();" value="Get Value">
+        <input type="button" onclick="getInputValue();" value="확인">
         <div id="map", class="map"></div>
         <script type="text/javascript">
         function getInputValue(){
-          var valueById = $("#input").val();
+          var valueById = $("#inputId").val();
           var valueByClass = $(".inputClass").val();
           var valueByName = $("input[name=inputName").val();
 

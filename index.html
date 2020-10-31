@@ -51,10 +51,13 @@
             source: new ol.source.OSM()
           })
         ],
+        interactions: ol.interaction.defaults({
+          dragPan: false
+          }),
         view: new ol.View({
-          center: ol.proj.fromLonLat([128.317960,36.4203004]),
-          minZoom: 10,
-          zoom: 10
+          center: ol.proj.fromLonLat([127.0016985,37.5642135]),
+          minZoom: 11,
+          zoom: 11
         })
       });
             var mySource=new ol.source.Vector({

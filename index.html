@@ -62,7 +62,7 @@
               //   style.getFill().setColor('blue'');
               // }
 
-              // style.getFill().setColor(array[generateRandom(0,9)])
+               style.getFill().setColor(array[generateRandom(0,9)])
               style.getText().setText(feature.get('SIG_KOR_NM'));
               return style;
             },
@@ -73,27 +73,27 @@
           return ranNum;
         }
         map.addLayer(Vectorlayer);
-
-var highlightStyle = new ol.style.Style({
-  stroke: new ol.style.Stroke({
-    color: '#f00',
-    width: 1,
-  }),
-  fill: new ol.style.Fill({
-    color: 'rgba(255,0,0,0.1)',
-  }),
-  text: new ol.style.Text({
-    font: '12px Calibri,sans-serif',
-    fill: new ol.style.Fill({
-      color: '#000',
-    }),
-    stroke: new ol.style.Stroke({
-      color: '#f00',
-      width: 3,
-    }),
-  }),
-});
 // 하이라이트 시작
+// var highlightStyle = new ol.style.Style({
+//   stroke: new ol.style.Stroke({
+//     color: '#f00',
+//     width: 1,
+//   }),
+//   fill: new ol.style.Fill({
+//     color: 'rgba(255,0,0,0.1)',
+//   }),
+//   text: new ol.style.Text({
+//     font: '12px Calibri,sans-serif',
+//     fill: new ol.style.Fill({
+//       color: '#000',
+//     }),
+//     stroke: new ol.style.Stroke({
+//       color: '#f00',
+//       width: 3,
+//     }),
+//   }),
+// });
+
 // var featureOverlay = new ol.layer.Vector({
 //     source: new ol.source.Vector(),
 // 	map: map,

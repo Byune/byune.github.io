@@ -85,7 +85,7 @@
             },
 
         });
-      $.getJSON("./result.json", function(data) {
+      $.getJSON("./result.json", function(data){
         mySource.addFeatures((new ol.format.GeoJSON()).readFeatures(data));
         });
 

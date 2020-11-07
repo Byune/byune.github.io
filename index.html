@@ -7,11 +7,33 @@
         <h2>도시재난 프로젝트</h2>
     </head>
     <body>
+      <div id ="wrapper">
+        <div id ="contents">
+        <input type = "text" id = "data-value">
+        <div id = "slider-bar"></div>
+        </div>
+      </div>
         <input type="text" id ="inputId" class="inputClass" name="inputName" value="test"
         style="text-align:center; width:100px; height:30px; letter-spacing: 1px">
         <input type="button" onclick="getInputValue();" value="확인"> 
         <div id="map", class="map"></div>
         <script type="text/javascript">
+        $(function(){
+          $('#slider-bar').slider({
+            range : 'max',
+            min : 0,
+            max : 100,
+            value : 50,
+            orientataion : 'horizontal',
+            animate : 'slow',
+            slide : function(envent, ui) {
+              $('#data-value').val(ui.value);
+            }
+          });
+
+          $('#data-value').val($('#slider-bar').slider('value'));
+        });
+          
         
         var resultjson = {};
         $.getJSON("./result.json", function(data){
@@ -27,11 +49,7 @@
                 "\nvalueByClass =" + valueByClass +
                 "\nvalueByName =" + valueByName);
         }
-        var slider = new Slider("#inputId", {
-          formatter : function(value) {
-            return "Current value: " + value;
-          }
-        });
+        
         // var array =['#FF0000','#FF4000','#FF8000','#FFBF00',
         //             '#FFFF00','#BFFF00','#80FF00','#40FF00',
         //             '#00FF00','#00FF40'];

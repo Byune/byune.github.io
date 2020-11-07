@@ -16,20 +16,26 @@
         var resultjson = {};
         $.getJSON("./result.json", function(data){
           resultjson = data;
-        });
+        }); 
 
         function getInputValue(){
           var valueById = $("#inputId").val();
           var valueByClass = $(".inputClass").val();
-          var valueByName = $("input[name=inputName").val();
+          var valueByName = $("input[name=inputName]").val();
 
           alert("valueById = " + valueById +
                 "\nvalueByClass =" + valueByClass +
                 "\nvalueByName =" + valueByName);
         }
-        var array =['#FF0000','#FF4000','#FF8000','#FFBF00',
-                    '#FFFF00','#BFFF00','#80FF00','#40FF00',
-                    '#00FF00','#00FF40'];
+        var slider = new dhx.Slider("slider", {
+          min : 0,
+          max : 100,
+          step : 1,
+          value : 30
+        });
+        // var array =['#FF0000','#FF4000','#FF8000','#FFBF00',
+        //             '#FFFF00','#BFFF00','#80FF00','#40FF00',
+        //             '#00FF00','#00FF40'];
       
       var style = new ol.style.Style({
         fill: new ol.style.Fill({

@@ -26,16 +26,13 @@
           $('#slider-bar').slider({
             range : 'max',
             min : 0,
-            max : 100,
-            value : 50,
+            max : 24,
+            value : 12,
             orientataion : 'horizontal',
-            animate : 'slow',
-            slide : function(event, ui) {
-              $('#data-value').val(ui.value);
-            }
+            animate : 'slow'
+
           });
 
-          $('#data-value').val($('#slider-bar').slider('value'));
         });
           
         

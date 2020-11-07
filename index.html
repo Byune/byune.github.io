@@ -27,11 +27,10 @@
                 "\nvalueByClass =" + valueByClass +
                 "\nvalueByName =" + valueByName);
         }
-        var slider = new dhx.Slider("slider", {
-          min : 0,
-          max : 100,
-          step : 1,
-          value : 30
+        var slider = new Slider("#ex1", {
+          formatter : function(value) {
+            return "Current value: " + value;
+          }
         });
         // var array =['#FF0000','#FF4000','#FF8000','#FFBF00',
         //             '#FFFF00','#BFFF00','#80FF00','#40FF00',

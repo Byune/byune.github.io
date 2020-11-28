@@ -250,6 +250,19 @@
     
         return diff + 1;
     }
+
+    function changeInputColor(input, value){
+        $(input).removeClass();
+        if (value < 0){
+            $(input).addClass('low-risk');
+        }
+        else if(value >= 0 && value <=10){
+            $(input).addClass('medium - risk');
+        }
+        else{
+            $(input).addClass('high-risk');
+        }
+    }
     
     </script>
 

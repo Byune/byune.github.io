@@ -122,15 +122,7 @@
 
     </div>
     <!-- End of Page Wrapper -->
-    .low-risk{
-        background : green;
-    }
-    .medium-risk{
-        background : orange;
-    }   
-    .high-risk{
-        background : red;
-    }
+    
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -208,7 +200,7 @@
     });
 
     //source 객체에 서울시에 대한 정보(행정구역코드, 행정구역 명 등등)와 좌표 정보 setting
-    $.getJSON("./emd09.geojson", function(data) { //./emd09.geojson
+    $.getJSON("./sgg09.geojson", function(data) { //./emd09.geojson
 
         mySource.addFeatures((new ol.format.GeoJSON()).readFeatures(data));
 

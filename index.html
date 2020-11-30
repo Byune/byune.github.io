@@ -196,7 +196,7 @@
         })
     });
     //source 객체에 서울시에 대한 정보(행정구역코드, 행정구역 명 등등)와 좌표 정보 setting
-    $.getJSON("https://0h-kwon.github.io/sgg09.geojson", function(data) { //./emd09.geojson
+    $.getJSON("sgg09.geojson", function(data) { //./emd09.geojson
         mySource.addFeatures((new ol.format.GeoJSON()).readFeatures(data));
     }).done(function(){ //위 로직이 완료 되면 실행
         //source 객체에 우리가 분석한 결과에 대한 속성 정보를 추가 setting

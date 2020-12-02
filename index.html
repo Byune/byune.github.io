@@ -91,7 +91,7 @@
                             </div>
                         </div>
                     </form>
-
+                    <button type="button" class="navyBtn" onClick="location.href='http://222.239.90.78:53080/'"></button>
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
@@ -195,6 +195,7 @@
             zoom: 11
         })
     });
+    
     //좌표 + 속성정보를 저장하기 위한 source 객체 생성
     var mySource=new ol.source.Vector({
         format: new ol.format.GeoJSON({
@@ -239,7 +240,7 @@
             });
         // console.log(sigCd)
         });
-        //슬라이드바의 최대 max값을 오늘날짜 - 2020/01/01까지의 날짜 차이만큼 setting
+        //슬라이드바의 최대 max값을 오늘날짜 - 2020/01/20까지의 날짜 차이만큼 setting
         $("#rangeBar").attr({"max":dateDiff("2020-01-20")});
     });
 

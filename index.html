@@ -247,24 +247,7 @@
         $("#rangeBar").attr({"max":dateDiff("2020-01-20")});
     });
     
-    var svg = d3.select("body").append("svg")
-        .attr("width",500)
-        .attr("height",500)
-        .style("background-color","yellow");
-
-    d3.json("result.json",type).then(function(data){
-        var circle = svg.selectAll("circle").data(data)
-        .enter().append("circle")
-            .attr("cx",function(d){retrun d.x;})
-            .attr("cy",function(d){retrun d.y;})
-            .attr("r",10)
-            .attr("fill","red");
-    });
-    function type(d){
-        d.x=+d.x;
-        d.y=+d.y;
-        retrun d;
-    }
+    
     </script>
 
 

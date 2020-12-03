@@ -219,6 +219,14 @@
     var Vectorlayer = new ol.layer.Vector({
         source: mySource
     });
+    
+    new ol.layer.Vector({
+        title:  'added Layer',
+        source: new ol.source.GeoJSON({
+            projection 'EPSG:3875',
+            url : 'result.json'
+        })
+    })
     //map에 layer를 올린다.
     map.addLayer(Vectorlayer);
     $(function(){
@@ -245,7 +253,7 @@
         //슬라이드바의 최대 max값을 오늘날짜 - 2020/01/20까지의 날짜 차이만큼 setting
         $("#rangeBar").attr({"max":dateDiff("2020-01-20")});
     });
-
+    
     </script>
 
 

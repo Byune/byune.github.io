@@ -239,7 +239,7 @@
                 var feauterStyle = feature.getStyle();
                 //feauterStyle.getText().setText(feature.get('SIG_KOR_NM'));
                 feauterStyle.setFill(fillColor);
-                var tot = parselnt(obj[sigCd].infected);
+                var tot = parseInt(obj[sigCd].infected);
                 var sggNm = feature.get("SIG_KOR_NM");
                 feauterStyle.getText().setText(sggNm+ " : " + tot +"명" );  
                 feature.setStyle(feauterStyle);

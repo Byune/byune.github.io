@@ -157,8 +157,8 @@
         color: 'rgba(255, 255, 255, 0.5)',
         }),
         stoke: new ol.style.Stroke({
-        color: 'black',
-        width: 3,
+        color: 'grey',
+        width: 1,
         }),
         text: new ol.style.Text({
             font: '8px calibri,sans-serif',
@@ -166,7 +166,7 @@
             color: 'blue',
             }),
             stroke: new ol.style.Stroke({
-            color: 'white',
+            color: 'black',
             width: 3,
             }),
         }),
@@ -247,7 +247,7 @@
                 //var tot = parseInt로 형변환 하여 뒷 소수점 없애고 값 띄우기
                 var tot = parseInt(obj[sigCd].infected);
                 var sggNm = feature.get("SIG_KOR_NM");
-                feauterStyle.getText().setText(sggNm+ " : " + tot +"명" );  
+                feauterStyle.getText().setText(sggNm + "\n" + " : " + tot +"명" );   
                 feature.setStyle(feauterStyle);
             });
             

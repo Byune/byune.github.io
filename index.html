@@ -239,10 +239,12 @@
                 var feauterStyle = feature.getStyle();
                 //feauterStyle.getText().setText(feature.get('SIG_KOR_NM'));
                 feauterStyle.setFill(fillColor);
+                var tot = feature.get("infected");
+                var sggNm = feauterStyle.getText();
+                featureStyle.getText().setText(sggNM + ":" + tot + "명");
                 feature.setStyle(feauterStyle);
             });
-            var sggNm = feauterStyle.getText();
-            featureStyle.getText().setText(sggNM + " : " + 그그그 인원넣기)
+            
         // console.log(sigCd)
         });
         //슬라이드바의 최대 max값을 오늘날짜 - 2020/01/20까지의 날짜 차이만큼 setting
